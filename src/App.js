@@ -4,6 +4,7 @@ import WeWillLive from "./component/WeWillLive";
 import { useMediaQuery } from "react-responsive";
 import Counter from "./component/counterComponents/Counter";
 function App() {
+     /// useMediaQuery from react responsive will return boolean according to query condition
      const isBigScreen = useMediaQuery({ query: "(min-width: 760px)" });
 
      //5th aug 2023 9am
