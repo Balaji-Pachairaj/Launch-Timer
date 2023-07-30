@@ -5,6 +5,7 @@ export const getRemainingTimeStampMs = (timeStampMs) => {
      const currentTimeStamp = dayjs();
 
      return {
+          days: getRemainingDays(currentTimeStamp, timeStamp),
           hours: getRemainingHours(currentTimeStamp, timeStamp),
           minutes: getRemainingMinutes(currentTimeStamp, timeStamp),
           seconds: getRemainingSeconds(currentTimeStamp, timeStamp),
@@ -27,8 +28,14 @@ const getRemainingMinutes = (currentTimeStamp, timeStamp) => {
 
 const getRemainingHours = (currentTimeStamp, timeStamp) => {
      // diff function will the hoursremaining
-     const hours = timeStamp.diff(currentTimeStamp, "hours");
+     const hours = timeStamp.diff(currentTimeStamp, "hours") % 24;
      return padWithZero(hours);
+};
+
+const getRemainingDays = (currentTimeStamp, timeStamp) => {
+     //diff function will be day remaining
+     const days = timeStamp.diff(currentTimeStamp, "days");
+     return padWithZero(days);
 };
 
 const padWithZero = (num) => {

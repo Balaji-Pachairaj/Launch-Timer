@@ -12,7 +12,7 @@ function App() {
      const endTime = new Date(endTimeStampMs);
 
      return (
-          <div className="w-full min-h-screen flex flex-row justify-center items-center bg-slate-50">
+          <div className="w-full min-h-screen flex flex-row justify-center md:items-center items-start md:p-0 pt-12 bg-slate-50">
                <div className=" flex flex-row">
                     <div className=" flex flex-col gap-6">
                          <Title />

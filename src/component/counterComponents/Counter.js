@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getRemainingTimeStampMs } from "./CounterLogic";
 
 const defaultTime = {
+     days: "00",
      hours: "00",
      minutes: "00",
      seconds: "00",
@@ -29,11 +30,9 @@ const Counter = ({ endTimeStampMs }) => {
      return (
           <div className=" w-full h-max lg:text-[80px] md:text-[45px] text-[45px] font-lora font-bold text-center">
                <p className="text-[#020202]">
-                    {remainingTime.hours}:{remainingTime.minutes}:
+                    {remainingTime.days}:{remainingTime.hours}:{remainingTime.minutes}:
                     {remainingTime.seconds}{" "}
-                    <span className="text-black text-[14px] md:text-[20px]   font-thin">
-                         {"(timer)"}
-                    </span>
+                   
                </p>
           </div>
      );
